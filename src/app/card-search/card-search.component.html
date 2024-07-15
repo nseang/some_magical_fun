@@ -1,7 +1,14 @@
-<p>card-search works!</p>
-
 <div>Card Name: <input type="text" [(ngModel)]="cardName"></div>
 
 <p>Card Name: {{cardName}}</p>
 
+<button (click)="getCards()">Search Card</button>
+<br>
+
+@for (card of cardList; track card) {
+  <!-- {{card}} -->
+  <img src={{card}} alt="pic" />
+}
+
+<br>
 <button (click)="logData()">Console Log</button>
